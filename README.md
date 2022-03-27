@@ -80,4 +80,3 @@ The Impact on the final balance of the users is insignificant. The weighted volu
 The Impact can be seen within someone who makes successive sales for a certain period of time will eventually keep win of the fees because the volumes of other users is decreasing rapidly unless they constantly make sales. 
 
 Conclusion: The decay factor should be determined based on how rapidly we want the volumes significance to decrease. In the future this variables will be dynamic based on the number of the users on the platform and will be deeply studied.
-![image](https://user-images.githubusercontent.com/99687146/160261785-b49c5e76-0cea-451d-997f-fcaecea28901.png)
