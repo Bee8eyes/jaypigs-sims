@@ -27,7 +27,7 @@ The simulation is made on the next assumptions:
 
 
 The current simulation contains three metrics that allow us to globally evaluate the performance of the platform over time.
-
+### Results  
 #### 1. **Total Weighted volume per user over time.**  
 In order to compute a users share in the total fee pool, we need to compute the total volume a user owns, at any point of time, or per the simulation, at any block.
 
