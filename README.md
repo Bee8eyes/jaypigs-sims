@@ -80,4 +80,4 @@ Here are two examples:
 The Impact on the final balance of the users is insignificant. The weighted volumes for all users decay at the same rate so it kind of cancels out (same decrease applied to everyone).
 The Impact can be seen within someone who makes successive sales for a certain period of time will eventually keep win of the fees because the volumes of other users is decreasing rapidly unless they constantly make sales. 
 
-Conclusion: The decay factor should be determined based on how rapidly we want the volumes significance to decrease. In the future this variables will be dynamic based on the number of the users on the platform and will be deeply studied.
+Conclusion: The decay factor should be determined based on how rapidly we want the volumes significance to decrease. In the future, this variable will be dynamic based on the number of the users on the platform, and will be studied more in depth.
