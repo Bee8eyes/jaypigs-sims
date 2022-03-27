@@ -15,7 +15,7 @@ Jaypigs distributs the fees revenue distribution model theory is explained here 
 [Jaypigs Distribution model](https://www.dropbox.com/s/4ypm2dvgnixfn0x/Jaypigs%20Revenue%20Sharing%20Model_v1.2.pdf?dl=0).
 
 ## Simulation results
-The simulation simulates multiple users making sales on different intervals
+The event simulated below corresponds to 5 users making sales on random blocks.
 ### Prequisites:  
 
 The simulation is made on the next assumptions:
@@ -23,17 +23,18 @@ The simulation is made on the next assumptions:
 - **Number of users**: It's fixed at 5 user. Each user makes a different number of transactions at random blocks. The number of transactions Users 1 to 5 made is respectively, 1,3,5,10,15 sales. 
 - **Total duration**:  The total duration of the simulation is 100 blocks. The scale can be considered 1/100, so block Number N in the simulation refers to the block N*100 in real scale. 
 - **Decay factor**: The Decay factor ```τ``` , determines how rapidly, the significance of a user's generated volume in a certain sale, decreases over time. More details about ```τ``` can be found in the [Decay factor impact](#Decay-factor-impact) section below. 
+- **fee**: This is the fee the platform collects from each sale. It's set at 10% for the current simulation. 
 
 
 
-The current simulation contains three metrics that allow us to globally evaluate the performance of the platform over time.
+The current simulation contains three metrics that allow us to globally evaluate the performance of the platform, and how the fees are distributed  over time.
 ### Results  
 #### 1. **Total Weighted volume per user over time.**  
-In order to compute a users share in the total fee pool, we need to compute the total volume a user owns, at any point of time, aka at all blocks.
+In order to compute a user's share in the total fee pool, we need to compute the total volume a user owns, at any point of time, aka at all blocks.
 
 
-We convert the generated volume per sale to the **weighted volume**, by multiplying it with a descending exponential function over time.    
-The total **weighted volume** (WV) is simply the sum of all the **weighted volumes** the sales of a certain user have generated. As a result, The sum of weighted volumes represents to a greater extent, the recent volume that a user have generated.   
+We convert the generated volume per sale to the **weighted volume**, by multiplying the volume generated (by a certain sale, for a certain user) with a descending exponential function over time.    
+The total **weighted volume** (WV) is simply the sum of all the **weighted volumes** the sales of a certain user have generated. As a result, The sum of weighted volumes represents to a greater extent, the recent volume that a user have generated. That is due to the fact that older the volume, the smaller it's corresponding WV.   
 More details about the theory can be found in [Jaypigs Distribution model](https://www.dropbox.com/s/4ypm2dvgnixfn0x/Jaypigs%20Revenue%20Sharing%20Model_v1.2.pdf?dl=0).
 
 WV Simulation result:
@@ -54,12 +55,12 @@ PSP Simulation result:
 
 **Analysis:** At block 1, user 3 had 100% of the pool share so he gets 100% of the fee the user after him generated. But after few block, other users made few sales so the ones that did that, have now a share in the fee pool. 
 
-One user PSP is not impacted only by his volume, but also the volume of other users. 
+One user PSP is not impacted only by his own volume, but also the volume of other users. 
 
 
 #### 3. Balance per user over time.
 
-The balance represents how much fees were collected by each user at any point of time.  
+The balance represents how much fees were redistributed to each user at any point of time.  
 
 Balance Simulation result:
 ![Balance evolution per user](https://github.com/Bee8eyes/jaypigs-sims/blob/main/Balance.PNG)  
